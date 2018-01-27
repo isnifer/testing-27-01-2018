@@ -1,8 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
 
-const API_SERVER = 'https://test.gettipsi.com'
-
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
   entry: [
@@ -54,13 +52,6 @@ module.exports = {
     inline: true,
     headers: {
       'Access-Control-Allow-Origin': '*',
-    },
-    proxy: {
-      '/v002/**': {
-        target: API_SERVER,
-        changeOrigin: true,
-        secure: true,
-      },
     },
     historyApiFallback: true,
   },
