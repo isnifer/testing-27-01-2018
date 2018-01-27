@@ -1,0 +1,35 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.text {
+  font-size: 40px;
+}
+
+.payButton {
+  background-color: #000000;
+  width: 200px;
+  text-decoration: none;
+  text-align: center;
+  margin: 10px auto 0;
+  padding: 15px 15px 20px;
+  border-radius: 10px;
+}
+
+.payButtonText {
+  color: #ffffff;
+  font-size: 50px;
+}

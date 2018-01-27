@@ -1,0 +1,15 @@
+{
+  "env": {
+    "development": {
+      "presets": [
+        ["@babel/preset-env", { "modules": false, "loose": true }],
+        "@babel/preset-stage-0",
+        "@babel/preset-react"
+      ],
+      "plugins": ["react-hot-loader/babel"]
+    },
+    "test": {
+      "presets": ["react-native", "react-native-stage-0"]
+    }
+  }
+}

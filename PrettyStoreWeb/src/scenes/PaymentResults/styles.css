@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  font-size: 25px;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.button {
+  display: inline-block;
+  background-color: #00b8ff;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
+}
