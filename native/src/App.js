@@ -1,5 +1,3 @@
-import React from 'react'
-import { View, Text, Button } from 'react-native'
 import { StackNavigator } from 'react-navigation'
 import Products from './scenes/Products'
 import Cart from './scenes/Cart'
