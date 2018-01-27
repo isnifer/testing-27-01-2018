@@ -24,8 +24,10 @@
     "autoprefixer": "^7.2.3",
     "babel-loader": "^8.0.0-beta.0",
     "babel-plugin-transform-export-default": "^7.0.0-alpha.20",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-react-native": "4.0.0",
     "babel-preset-react-native-stage-0": "1.0.1",
+    "babel-register": "^6.26.0",
     "css-loader": "0.28.7",
     "enzyme": "3.3.0",
     "enzyme-adapter-react-16": "1.1.1",
@@ -43,6 +45,8 @@
     "sinon": "^4.2.0",
     "style-loader": "0.19.1",
     "surge": "^0.19.0",
+    "tape": "^4.8.0",
+    "tape-async": "^2.3.0",
     "uglifyjs-webpack-plugin": "1.1.4",
     "url-loader": "0.6.2",
     "webdriverio": "4.7.1",
@@ -54,7 +58,8 @@
     "build": "webpack --config webpack.config.prod.js",
     "docker": "docker run -v $(pwd):/usr/src/app -p 3000:3000 -d isnifer/webpack-flow",
     "test": "NODE_ENV=test BABEL_ENV=test jest --color",
-    "deploy": "surge ./dist"
+    "deploy": "surge ./dist testing-27-01-2018.surge.sh",
+    "e2e": "NODE_ENV=test BABEL_ENV=test tape -r ./__tests__/setup __tests__/e2e/*.test.js"
   },
   "repository": {
     "type": "git",

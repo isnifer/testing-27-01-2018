@@ -2,7 +2,7 @@ const webdriverio = require('webdriverio')
 
 const options = {
   desiredCapabilities: {
-    browserName: 'firefox',
+    browserName: 'chrome',
   },
 }
 
