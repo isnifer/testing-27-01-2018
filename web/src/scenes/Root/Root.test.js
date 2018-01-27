@@ -4,6 +4,7 @@ import { MemoryRouter } from 'react-router'
 import helper from '../../../__tests__/helper'
 import { App } from './Root'
 
+// https://github.com/airbnb/enzyme/issues/516
 const click = element => element.simulate('click', { button: 0 })
 
 describe('Payments in the app', () => {
