@@ -5,15 +5,18 @@ import Cart from '../Cart'
 import PaymentResults from '../PaymentResults'
 import styles from './styles.css'
 
+export const App = () => (
+  <Switch>
+    <Route exact path="/" component={Products} />
+    <Route path="/cart/:inventoryId" component={Cart} />
+    <Route path="/results/:inventoryId" component={PaymentResults} />
+  </Switch>
+)
+
 export default () => (
   <BrowserRouter>
     <div className={styles.app}>
-      <Switch>
-        <Route exact path="/" component={Products} />
-        <Route path="/cart/:inventoryId" component={Cart} />
-        <Route path="/results/:inventoryId" component={PaymentResults} />
-        <Route component={Products} />
-      </Switch>
+      <App />
     </div>
   </BrowserRouter>
 )

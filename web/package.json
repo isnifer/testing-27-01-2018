@@ -9,6 +9,7 @@
     "react": "16.2.0",
     "react-dom": "16.2.0",
     "react-redux": "5.0.6",
+    "react-router": "^4.2.0",
     "react-router-dom": "4.2.2",
     "redux": "^3.7.2",
     "redux-auth-wrapper": "2.0.2",
@@ -37,6 +38,7 @@
     "extract-text-webpack-plugin": "3.0.2",
     "file-loader": "1.1.6",
     "jest": "22.0.4",
+    "jest-css-modules": "^1.1.0",
     "less": "2.7.3",
     "less-loader": "4.0.5",
     "lodash-webpack-plugin": "0.11.4",
@@ -97,6 +99,9 @@
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ],
-    "testRegex": "./src/components/.*/.*.test.js"
+    "testRegex": "./src/.*/.*.test.js",
+    "moduleNameMapper": {
+      "\\.(css)$": "<rootDir>/node_modules/jest-css-modules"
+    }
   }
 }
