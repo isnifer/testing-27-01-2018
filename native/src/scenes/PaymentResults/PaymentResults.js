@@ -6,6 +6,10 @@ import testID from 'react-native-testid'
 import db from '../Products/db'
 
 export default class PaymentResults extends PureComponent {
+  static propTypes = {
+    navigation: PropTypes.object.isRequired,
+  }
+
   render() {
     const { navigation } = this.props
     const { inventoryId } = navigation.state.params
@@ -14,7 +18,7 @@ export default class PaymentResults extends PureComponent {
       <View style={styles.wrapper}>
         <Text style={styles.text} {...testID('paymentSuccessfull')}>
           Congratulations!{'\n'}
-          You've bought {inventory.name} {inventory.type}
+          You have bought {inventory.name} {inventory.type}
           {'\n'}{'\n'}{'\n'}
         </Text>
         <Button
@@ -22,12 +26,12 @@ export default class PaymentResults extends PureComponent {
             this.props.navigation.dispatch(NavigationActions.reset({
               index: 0,
               actions: [
-                NavigationActions.navigate({ routeName: 'Products'})
-              ]
+                NavigationActions.navigate({ routeName: 'Products' }),
+              ],
             }))
           }}
           title="Go To Products List"
-          {...testID(`goToHome`)}
+          {...testID('goToHome')}
         />
       </View>
     )

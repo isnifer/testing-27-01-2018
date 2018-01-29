@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MyInput /> should handle onChange callback 1`] = `
+<input
+  onChange={[Function]}
+  type="text"
+  value=""
+/>
+`;
+
+exports[`<MyInput /> should handle onChange callback 2`] = `
+<input
+  onChange={[Function]}
+  type="text"
+  value=""
+/>
+`;
+
+exports[`<MyInput /> should match snapshot 1`] = `
+<input
+  onChange={[Function]}
+  type="text"
+  value=""
+/>
+`;

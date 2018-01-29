@@ -15,6 +15,9 @@ test('Payments in the app', async (t) => {
   t.pass('should transition into cart screen and click pay')
 
   await driver.waitForVisible(idFromAccessId('paymentSuccessfull'), 15000)
-  await driver.click(idFromAccessId('goToHome'), 15000)
+  await driver.click(idFromAccessId('goToHome'))
   t.pass('should wait for successfull payment dialog')
+
+  await driver.waitForVisible(addToCartButtonId, 10000)
+  t.pass('should return to the first screen')
 })

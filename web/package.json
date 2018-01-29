@@ -99,7 +99,7 @@
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ],
-    "testRegex": "./src/.*/.*.test.js",
+    "testRegex": "./src/.*/.*.test.js$",
     "moduleNameMapper": {
       "\\.(css)$": "<rootDir>/node_modules/jest-css-modules"
     }

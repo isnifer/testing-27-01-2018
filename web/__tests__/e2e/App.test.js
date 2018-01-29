@@ -14,4 +14,7 @@ test('Payments in the app', async (t, driver, helper) => {
   await driver.waitForVisible(helper.idFromQA('paymentSuccessfull'), 15000)
   await driver.click(helper.idFromQA('goToHome'), 15000)
   t.pass('should wait for successfull payment dialog')
+
+  await driver.waitForVisible(addToCartButtonId, 10000)
+  t.pass('should return to the first screen')
 })

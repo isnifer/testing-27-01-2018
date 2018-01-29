@@ -19,6 +19,14 @@ describe('<MyInput />', () => {
     expect(component).toBeTruthy()
   })
 
+  it('should match snapshot', () => {
+    const component = shallow(
+      <MyInput />
+    )
+
+    expect(component).toMatchSnapshot()
+  })
+
   it('should handle onChange callback', () => {
     // Create spy
     const onChangeHandler = spy()
@@ -30,6 +38,8 @@ describe('<MyInput />', () => {
 
     const myInput = component.instance()
     const inputValue = 'hello'
+
+    expect(component).toMatchSnapshot()
 
     // Type text "hello"
     typeText(inputValue, myInput.handleChangeValue)
